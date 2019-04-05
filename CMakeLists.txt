@@ -151,7 +151,7 @@ if (NOT DEFINED CMAKE_INSTALL_RPATH_USE_LINK_PATH)
 endif ()
 
 include(CMakeDependentOption)
-set(examples_default OFF)
+set(examples_default ON)
 if (DEFINED VISOCYTE_BUILD_EXAMPLES)
   message(DEPRECATION
     "VISOCYTE_BUILD_EXAMPLES has been renamed to VISOCYTE_ENABLE_EXAMPLES.")
@@ -166,7 +166,7 @@ option(VISOCYTE_BUILD_DEVELOPER_DOCUMENTATION "Build Visocyte C++/Python docs" O
 option(VISOCYTE_BUILD_QT_GUI "Enable Visocyte Qt-based client" ON)
 option(VISOCYTE_USE_MPI "Enable MPI support for parallel computing" OFF)
 option(VISOCYTE_USE_VTKM "Enable VTK-m accelerated algorithms" ON)
-option(VISOCYTE_USE_OSPRAY "Build Visocyte with OSPRay Ray Traced rendering" OFF)
+option(VISOCYTE_USE_OSPRAY "Build Visocyte with OSPRay Ray Traced rendering" ON)
 option(VISOCYTE_ENABLE_LOGGING "Enable logging support." ON)
 mark_as_advanced(VISOCYTE_ENABLE_LOGGING)
 
@@ -201,7 +201,7 @@ mark_as_advanced(VISOCYTE_ENABLE_MOTIONFX)
 option(VISOCYTE_ENABLE_VISITBRIDGE "Enable VisIt readers." OFF)
 option(VISOCYTE_ENABLE_XDMF2 "Enable Xdmf2 support." ON)
 mark_as_advanced(VISOCYTE_ENABLE_XDMF2)
-option(VISOCYTE_ENABLE_XDMF3 "Enable Xdmf3 support." OFF)
+option(VISOCYTE_ENABLE_XDMF3 "Enable Xdmf3 support." ON)
 
 set(VISOCYTE_BUILD_TESTING "OFF"
   CACHE STRING "Build module testing directories")
@@ -612,6 +612,7 @@ set(visocyte_default_plugins
   SurfaceLIC
   ThickenLayeredCells
   VTKmFilters
+  pvNVIDIAIndeX
   pvblot)
 foreach (visocyte_default_plugin IN LISTS visocyte_default_plugins)
   set("_visocyte_plugin_default_${visocyte_default_plugin}" ON)
