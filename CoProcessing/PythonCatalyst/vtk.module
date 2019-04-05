@@ -1,0 +1,23 @@
+NAME
+  Visocyte::PythonCatalyst
+LIBRARY_NAME
+  vtkPVPythonCatalyst
+CONDITION
+  VISOCYTE_ENABLE_PYTHON
+DEPENDS
+  Visocyte::Catalyst
+  VTK::PythonInterpreter
+PRIVATE_DEPENDS
+  Visocyte::PythonInitializer
+  VTK::ParallelCore
+TEST_DEPENDS
+  Visocyte::CatalystTestDriver
+  Visocyte::Core
+  VTK::IOImage
+  VTK::ParallelCore
+  VTK::TestingRendering
+TEST_OPTIONAL_DEPENDS
+  VTK::ParallelMPI
+TEST_LABELS
+  Catalyst
+  Visocyte

@@ -1,0 +1,23 @@
+NAME
+  Visocyte::ClientServerCorePython
+LIBRARY_NAME
+  vtkPVClientServerCorePython
+CONDITION
+  VISOCYTE_ENABLE_PYTHON
+GROUPS
+  VisocyteCore
+KIT
+  Visocyte::ClientServerKit
+DEPENDS
+  VTK::CommonExecutionModel
+  VTK::FiltersProgrammable
+  VTK::PythonInterpreter
+PRIVATE_DEPENDS
+  Visocyte::ClientServerCoreCore
+  VTK::ParallelCore
+  VTK::WrappingPythonCore
+TEST_DEPENDS
+  Visocyte::Core
+  VTK::TestingCore
+TEST_LABELS
+  Visocyte

@@ -1,0 +1,22 @@
+NAME
+  Visocyte::pqCore
+LIBRARY_NAME
+  pqCore
+GROUPS
+  VisocyteQt
+DEPENDS
+  Visocyte::ClientServerCoreDefault
+  Visocyte::pqWidgets
+  Visocyte::qttesting
+  VTK::GUISupportQt
+PRIVATE_DEPENDS
+  Visocyte::Animation
+  Visocyte::ServerManagerApplication
+  Visocyte::ServerManagerDefault
+  VTK::TestingRendering
+  VTK::vtksys
+TEST_DEPENDS
+  Visocyte::ServerManagerRendering
+TEST_LABELS
+  Visocyte
+EXCLUDE_WRAP
